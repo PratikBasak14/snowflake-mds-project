@@ -50,3 +50,7 @@ COPY INTO raw_nyc_bikes (
 )
 FROM @stage_nyc_bikes
 FILE_FORMAT = (FORMAT_NAME = 'format_csv');
+
+# test the data
+SELECT COUNT(*) FROM raw_nyc_bikes;
+SELECT COUNT(*) FROM raw_weather;
